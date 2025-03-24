@@ -17,4 +17,23 @@ public class Item {
         this.valorProduto = valorProduto;
         codigoProduto++;
     }
+
+    public void exibirItem() {
+        System.out.println("Nome do produto: " + nomeProduto);
+        System.out.println("Código do produto: " + codigoProduto);
+        System.out.println("Quantidade do produto: " + quantidadeProduto);
+        System.out.println("Valor do produto: " + valorProduto);
+    }
+
+    public void entraProduto(int quantidadeProduto) {
+        this.quantidadeProduto += quantidadeProduto;
+    } 
+
+    public void saidaProduto(int quantidadeProduto) {
+        this.quantidadeProduto -= quantidadeProduto;
+    }
+
+    public void setquatiProduto(int quantidadeProduto) {
+        this.quantidadeProduto = quantidadeProduto;
+    }
 }
