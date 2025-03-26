@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+          resize: none;
+          width: 300px;
+          height: 100px;
+        }
+        label{
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <form action="arquivo no servidor" method="post">
+        <fieldset>
+            <legend>Dados Gerais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" minlength="3" name="nome" id="nome" required>
+
+            <lable for="data_nasc">Data de Nascimento:</lable>
+            <input type="text" name="data_nasc" id="data_nasc" required>
+
+            <lable for"cpf">CPF:</lable>
+            <input type="text" minlength="10" name="cpf" id="cpf" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <select name="tipo_endereco" id="tipo_endereco" required>
+                <option value="">Selecione</option>
+                <option value="">Rua</option>
+                <option value="">Avenida</option>
+                <option value="">Estrada</option>
+                <option value="">Rodovia</option>
+                <option value="">Outros</option>
+            </select>
+
+            <lable for="endereço">Endereço:</lable>
+            <input type="text" name="endereço" id="endereço" required>
+
+            <label for="numero">Número:</label>
+            <input type="text" name="numero" id="numero" required>
+            
+            <label for="complemento">Complemento:</label>
+            <input type="text" name="complemento" id="complemento" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fale Conosco</legend>
+            <label for"texto">Mensagem:</label>
+            <textarea name="texto" id="texto" cols="30" rows="10" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+        
+</body>
+</html>
