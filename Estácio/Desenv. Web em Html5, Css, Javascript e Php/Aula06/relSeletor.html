@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>relSeletor</title>
+    <style>
+      div p {
+        background-color: lightblue;
+      }
+      div > p {
+        border: 2px solid lightgreen;
+      }
+      div + p {
+        background-color: lightcoral;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>div p (todos os &lt;p&gt; dentro da div</h2>
+    <div>
+      <p>Parágrafo 1 - filho direto (div > p)</p>
+      <section>
+        <p>Parágrafo 2 - neto da div (div P)</p>
+      </section>
+    </div>
+
+    <p>Parágrafo 3 - vem depois da div (div + p)</p>
+
+    <p>Parágrafo 4 - não sera afetado por div (div + p)</p>
+  </body>
+</html>
