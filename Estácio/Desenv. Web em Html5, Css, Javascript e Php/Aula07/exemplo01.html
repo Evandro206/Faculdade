@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecemplo01</title>
+</head>
+<body>
+    <div id="exibe_resultado">Resultado da Multiplicação: </div>
+
+    <label>Entre com o primeiro numero: </label>
+    <input type="value" id="numero1" ><br>
+    <label>Entre com o segundo numero: </label>
+    <input type="value" id="numero2" >
+    <button id="btnCalcular" onclick="executar()">Calcular</button>
+    <div id="resultado"><strong>Resultado da Multiplicação<br><br></strong></div>
+    <script>
+        let variavel;
+        variavel = 3 + 3;
+        alert(variavel);
+
+        let resultadoMultiplicacao = multiplique(10, 50);
+        let divLocal = document.getElementById('exibe_resultado');
+        divLocal.innerHTML += resultadoMultiplicacao;
+
+        function executar() {
+            let num1 = document.getElementById("numero1").value;
+            let num2 = document.getElementById("numero2").value;
+            let resultadoMultiplicacao = multiplique(num1, num2);
+            let divLocal = document.getElementById('resultado');
+            divLocal.innerHTML += "resposta:" + resultadoMultiplicacao;
+        }
+
+        function multiplique(a, b) {
+            return a * b;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PseudoElementos</title>
+    <style>
+      .destaque::before {
+        content: "🔥";
+      }
+      .destaque::after {
+            content: "🔥";
+      }
+      .paragrafo-estilizado::first-letter{
+        font-size: 3em;
+        color: darkred;
+        font-weight: bold;
+      }
+      .paragrafo-estilizado::first-line{
+        color: darkblue;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="destaque">Bem-Vindo ao mundo dos PseudoElementos</h1>
+    <p class="paragrafo-estilizado">
+      Este é um parágrafo estilizado com pseudo-elementos. O pseudo-elemento
+      <strong>::before</strong> adiciona conteúdo antes do texto, enquanto o
+      pseudo-elemento <strong>::after</strong> adiciona conteúdo após o texto.
+    </p>
+  </body>
+</html>
