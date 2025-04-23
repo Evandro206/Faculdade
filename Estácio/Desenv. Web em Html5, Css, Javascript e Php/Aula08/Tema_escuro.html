@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema escuro</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        transition: background-color 0.5s ease;
+        button {
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+      body.claro {
+        background-color: #f4f4f4;
+        color: #333;
+        button {
+          background-color: #f4f4f4;
+          color: #333;
+          border: 1px solid #333
+        }
+      }
+      body.escuro {
+        background-color: #333;
+        color: #f4f4f4;
+        button {
+          background-color: #333;
+          color: #f4f4f4;
+          border: 1px solid #f4f4f4;
+        }
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body class="claro">
+    <div class="container">
+      <h1>Aleterando CSS Dinamicamente</h1>
+      <p>Clique no botão para mudar o tema!</p>
+      <button id="trocar" onclick="mudarTema()">Tema Escuro</button>
+    </div>
+    <script>
+      const mudarTema = () => {
+        const body = document.body;
+        if (body.classList.contains("claro")) {
+          body.classList.replace("claro", "escuro");
+        } else {
+          body.classList.replace("escuro", "claro");
+        }
+        const botao = document.getElementById("trocar");
+        botao.innerText = body.classList.contains("claro")
+          ? "Tema Escuro"
+          : "Tema Claro";
+      };
+    </script>
+  </body>
+</html>

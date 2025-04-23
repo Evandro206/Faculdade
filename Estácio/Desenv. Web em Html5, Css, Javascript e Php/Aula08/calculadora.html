@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    div {
+        text-align: center;
+    }
+    input, select, button {
+        margin: 5px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        background-color: #28a745;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #218838;
+    }
+</style>
+<body>
+    <div>
+        <h1>Calculadora</h1>
+            <input type="value" id="num1" placeholder="Número 1" required>
+            <input type="value" id="num2" placeholder="Número 2" required>
+            <select id="operacao" required>
+                <option>Selecione a operação</option>
+                <option>Soma</option>
+                <option>Subtração</option>
+                <option>Multiplicação</option>
+                <option>Divisão</option>
+            </select>
+            <button type="submit" onclick="calcular()">Calcular</button>
+            <p id="resposta">Após calcular a resposta aparecera aqui</p>
+        </form>
+    </div>
+    <script>
+        const calcular = () =>{
+            let num1 = parseFloat(document.getElementById("num1").value); 
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operacao = document.getElementById("operacao").selectedIndex;
+           
+            if(isNaN(num1) || isNaN(num2 || operacao === 0)) {
+                alert("Por favor, insira números válidos e selecione uma operação.");
+                return;
+            }
+
+            let resultado;
+            switch(operacao) {
+                case 1:
+                    resultado = num1 + num2;
+                    break;
+                case 2:
+                    resultado = num1 - num2;
+                    break;
+                case 3:
+                    resultado = num1 * num2;
+                    break;
+                case 4:
+                        resultado = num1 / num2;
+                    break;
+                default:
+                    resultado = "Erro: operação inválida";
+            }
+            document.getElementById('resposta').innerHTML = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>
