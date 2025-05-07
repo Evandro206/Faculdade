@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Contagem Regressiva</h1>
+    <div id="contador">
+      <script>
+        let numero = 10;
+        const elementoContador = document.getElementById("contador");
+        do {
+          elementoContador.innerHTML += `<h2>${numero}</h2>`;
+          numero--;
+        } while (numero > 0);
+        if (numero === 0) {
+          elementoContador.innerHTML += `<h2>Fim!</h2>`;
+        }
+      </script>
+    </div>
+  </body>
+</html>

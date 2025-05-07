@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #header{
+            text-align: center;
+            margin-top: 20px;
+        }
+        #tabela{
+            border: 1px solid #fff;
+            margin: 20px auto;
+            width: 50%;
+            text-align: center;
+            td{
+                border: 1px solid #fff;
+                padding: 10px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="header">Tabuada do</h1>
+    <table id="tabela">
+      <tr>
+        <th>Número</th>
+        <th>Resultado</th>
+      </tr>
+    </table>
+    <script>
+      const numero = prompt("Digite um número para ver a tabuada:");
+      const elementoTabela = document.getElementById("tabela");
+      for (let i = 1; i <= 10; i++) {
+        const linha = elementoTabela.insertRow();
+        linha.insertCell(0).innerHTML = `${numero} x ${i}`;
+        linha.insertCell(1).innerHTML = `${numero * i}`;
+      }
+      const elementoHeader = document.getElementById("header");
+      elementoHeader.innerHTML += ` ${numero}`;
+    </script>
+  </body>
+</html>
