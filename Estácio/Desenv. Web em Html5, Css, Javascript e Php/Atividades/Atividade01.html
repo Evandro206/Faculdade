@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas Dinâmicas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+      }
+      input[type="number"] {
+        margin: 5px;
+      }
+      #resultado {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quantas notas você vai calcular?</h1>
+    <form id="form">
+      <input
+        type="number"
+        id="quantidade"
+        placeholder="Digite a quantidade de notas"
+        required
+      />
+      <button type="button" onclick="criarInputs()">Enviar</button>
+    </form>
+    <div id="notasContainer"></div>
+    <button
+      id="calcular"
+      type="button"
+      style="display: none"
+      onclick="calcularMedia()"
+    >
+      Calcular Média
+    </button>
+    <div id="resultado"></div>
+
+    <script>
+      function criarInputs() {
+        const quantidade = parseInt(
+          document.getElementById("quantidade").value
+        );
+        const notasContainer = document.getElementById("notasContainer");
+        notasContainer.innerHTML = "";
+
+        if (isNaN(quantidade) || quantidade <= 0) {
+          alert("Insira um número válido para a quantidade de notas.");
+          return;
+        }
+
+        for (let i = 0; i < quantidade; i++) {
+          const inputNota = document.createElement("input");
+          inputNota.type = "number";
+          notasContainer.innerHTML += "<br>" + "Nota " + (i + 1) + ": ";
+          inputNota.className = "nota";
+          notasContainer.appendChild(inputNota);
+        }
+        document.getElementById("calcular").style.display = "block";
+      }
+
+      function calcularMedia() {
+        const notas = document.querySelectorAll(".nota");
+        let soma = 0;
+        let quantidade = notas.length;
+
+        notas.forEach((input) => {
+          let nota = parseFloat(input.value);
+          if (!isNaN(nota)) {
+            soma += nota;
+          }
+        });
+
+        if (quantidade > 0) {
+          document.getElementById(
+            "resultado"
+          ).innerHTML = `Total: ${soma} <br> Média: ${(
+            soma / quantidade
+          ).toFixed(2)}`;
+        } else {
+          alert("Por favor, insira notas válidas.");
+        }
+      }
+    </script>
+  </body>
+</html>
