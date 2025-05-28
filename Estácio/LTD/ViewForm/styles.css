@@ -1,0 +1,131 @@
+/* Resetando padrões */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff, #c9c9c9);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Posiciona os elementos na parte inferior da tela */
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa de diálogo formatada e posicionada na parte de baixo */
+.dialog {
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; /* Garante espaçamento da borda inferior */
+}
+
+/* Título da interface */
+.dialog h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilizando o select para uma aparência agradável */
+select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  appearance: none; /* Remove a seta padrão em alguns navegadores */
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Container para os botões, dispostos horizontalmente */
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+/* Estilizando os botões */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Botão OK */
+#ok {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Botão Cancelar */
+#cancel {
+  background-color: #555(0 50% 50%);
+  color: #fff;
+}
+
+/* Efeito hover para os botões */
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Estilização opcional para a tabela de dados */
+table {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 800px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.75rem;
+  border: none;
+  text-align: center;
+}
+
+table th {
+  background-color: #555;
+  color: #fff;
+}
+
+table tr{
+  background-color: #555;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #fff;
+  color: #333;
+}
+
+

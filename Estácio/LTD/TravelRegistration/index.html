@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diário de Borda Puxada</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>DIÁRIO DE BORDA PUXADA</h1>
+
+      <form id="travel-form">
+        <!-- Informações Gerais -->
+        <section class="general">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="data_viagem">DATA VIAGEM:</label>
+              <input type="date" id="data_viagem" required/>
+            </div>
+            <div class="form-group">
+              <label for="inicio">INICIO:</label>
+              <input type="time" id="inicio" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="motorista">MOTORISTA:</label>
+              <select id="motorista" required>
+                <option value="">Selecione</option>
+                <option value="1">Motorista 1</option>
+                <option value="2">Motorista 2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="deposito">DEPÓSITO:</label>
+              <select id="deposito" required>
+                <option value="">Selecione</option>
+                <option value="1">Depósito 1</option>
+                <option value="2">Depósito 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fabrica">FÁBRICA:</label>
+              <select id="fabrica" required>
+                <option value="">Selecione</option>
+                <option value="1">Fábrica 1</option>
+                <option value="2">Fábrica 2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cavalo">CAVALO:</label>
+              <select id="cavalo" required>
+                <option value="">Selecione</option>
+                <option value="1">Cavalo 1</option>
+                <option value="2">Cavalo 2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="carreta">CARRETA:</label>
+              <select id="carreta" required>
+                <option value="">Selecione</option>
+                <option value="1">Carreta 1</option>
+                <option value="2">Carreta 2</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Trajeto de Ida para a Fábrica -->
+        <section>
+          <h2>TRAJETO DE IDA PARA A FÁBRICA:</h2>
+          <div class="trajeto">
+            <!-- Parada 1 -->
+            <div class="parada">
+              <div class="form-group">
+                <label for="parada1">PARADA 1:</label>
+                <select id="parada1" required>
+                  <option value="">Selecione</option>
+                  <option value="1">Opção 1</option>
+                  <option value="2">Opção 2</option>
+                </select>
+              </div>
+              <div class="time-group">
+                <div class="form-group">
+                  <label for="parada1_inicio">INICIO:</label>
+                  <input type="time" id="parada1_inicio" required />
+                </div>
+                <div class="form-group">
+                  <label for="parada1_fim">FIM:</label>
+                  <input type="time" id="parada1_fim" required />
+                </div>
+              </div>
+            </div>
+
+            <!-- Parada 2 -->
+            <div class="parada">
+              <div class="form-group">
+                <label for="parada2">PARADA 2:</label>
+                <select id="parada2">
+                  <option selected disabled>Selecione</option>
+                  <option value="1">Opção 1</option>
+                  <option value="2">Opção 2</option>
+                </select>
+              </div>
+              <div class="time-group">
+                <div class="form-group">
+                  <label for="parada2_inicio">INICIO:</label>
+                  <input type="time" id="parada2_inicio" />
+                </div>
+                <div class="form-group">
+                  <label for="parada2_fim">FIM:</label>
+                  <input type="time" id="parada2_fim" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Parada 3 -->
+            <div class="parada">
+              <div class="form-group">
+                <label for="parada3">PARADA 3:</label>
+                <select id="parada3">
+                  <option selected disabled>Selecione</option>
+                  <option value="1">Opção 1</option>
+                  <option value="2">Opção 2</option>
+                </select>
+              </div>
+              <div class="time-group">
+                <div class="form-group">
+                  <label for="parada3_inicio">INICIO:</label>
+                  <input type="time" id="parada3_inicio" />
+                </div>
+                <div class="form-group">
+                  <label for="parada3_fim">FIM:</label>
+                  <input type="time" id="parada3_fim" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Parada 4 -->
+            <div class="parada">
+              <div class="form-group">
+                <label for="parada4">PARADA 4:</label>
+                <select id="parada4">
+                  <option selected disabled>Selecione</option>
+                  <option value="1">Opção 1</option>
+                  <option value="2">Opção 2</option>
+                </select>
+              </div>
+              <div class="time-group">
+                <div class="form-group">
+                  <label for="parada4_inicio">INICIO:</label>
+                  <input type="time" id="parada4_inicio" />
+                </div>
+                <div class="form-group">
+                  <label for="parada4_fim">FIM:</label>
+                  <input type="time" id="parada4_fim" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chegada ao Destino -->
+        <section>
+          <h2>CHEGADA AO DESTINO:</h2>
+
+          <div class="chegada">
+            <!-- Refeição -->
+          <div class="parada">
+            <div class="form-group">
+              <label for="refeicao">REFEIÇÃO:</label>
+              <select id="refeicao" required>
+                <option value="">Selecione</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+              </select>
+            </div>
+            <div class="time-group">
+              <div class="form-group">
+                <label for="refeicao_inicio">INICIO:</label>
+                <input type="time" id="refeicao_inicio" required />
+              </div>
+              <div class="form-group">
+                <label for="refeicao_fim">FIM:</label>
+                <input type="time" id="refeicao_fim" required/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tempo de Espera -->
+          <div class="parada">
+            <div class="form-group">
+              <label for="tempo_espera">TEMPO ESPERA:</label>
+              <select id="tempo_espera" required>
+                <option value="">Selecione</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+              </select>
+            </div>
+            <div class="time-group">
+              <div class="form-group">
+                <label for="tempo_inicio">INICIO:</label>
+                <input type="time" id="tempo_inicio" required/>
+              </div>
+              <div class="form-group">
+                <label for="tempo_fim">FIM:</label>
+                <input type="time" id="tempo_fim" required/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Encerramento da Viagem -->
+          <div class="encerramento">
+            <div class="form-group">
+              <label for="data_encerramento">Encerramento Viagem:</label>
+              <input type="date" id="retorno" required/>
+            </div>
+            <div class="form-group">
+              <label for="hora_encerramento">HORA:</label>
+              <input type="time" id="hora_encerramento" required />
+            </div>
+          </div>
+
+          <!-- ID -->
+           <div class="id">
+            <div class="form-group">
+              <label for="id_viagem">ID VIAGEM:</label>
+              <input type="text" id="id_viagem" value="" disabled/>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Trajeto de Volta da Fábrica -->
+        <section>
+          <h2>TRAJETO DE VOLTA DA FÁBRICA:</h2>
+          <div class="trajeto">
+
+          <!-- Volta – Parada 1 -->
+          <div class="parada">
+            <div class="form-group">
+              <label for="volta_parada1">PARADA 1:</label>
+              <select id="volta_parada1" required>
+                <option value="">Selecione</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+              </select>
+            </div>
+            <div class="time-group">
+              <div class="form-group">
+                <label for="volta_parada1_inicio">INICIO:</label>
+                <input type="time" id="volta_parada1_inicio" required />
+              </div>
+              <div class="form-group">
+                <label for="volta_parada1_fim">FIM:</label>
+                <input type="time" id="volta_parada1_fim" required />
+              </div>
+            </div>
+          </div>
+
+          <!-- Volta – Parada 2 -->
+          <div class="parada">
+            <div class="form-group">
+              <label for="volta_parada2">PARADA 2:</label>
+              <select id="volta_parada2">
+                <option selected disabled>Selecione</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+              </select>
+            </div>
+            <div class="time-group">
+              <div class="form-group">
+                <label for="volta_parada2_inicio">INICIO:</label>
+                <input type="time" id="volta_parada2_inicio" />
+              </div>
+              <div class="form-group">
+                <label for="volta_parada2_fim">FIM:</label>
+                <input type="time" id="volta_parada2_fim" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Volta – Parada 3 -->
+          <div class="parada">
+            <div class="form-group">
+              <label for="volta_parada3">PARADA 3:</label>
+              <select id="volta_parada3">
+                <option selected disabled>Selecione</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+              </select>
+            </div>
+            <div class="time-group">
+              <div class="form-group">
+                <label for="volta_parada3_inicio">INICIO:</label>
+                <input type="time" id="volta_parada3_inicio" />
+              </div>
+              <div class="form-group">
+                <label for="volta_parada3_fim">FIM:</label>
+                <input type="time" id="volta_parada3_fim" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Volta – Parada 4 -->
+          <div class="parada">
+            <div class="form-group">
+              <label for="volta_parada4">PARADA 4:</label>
+              <select id="volta_parada4">
+                <option selected disabled>Selecione</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+              </select>
+            </div>
+            <div class="time-group">
+              <div class="form-group">
+                <label for="volta_parada4_inicio">INICIO:</label>
+                <input type="time" id="volta_parada4_inicio" />
+              </div>
+              <div class="form-group">
+                <label for="volta_parada4_fim">FIM:</label>
+                <input type="time" id="volta_parada4_fim" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Botão de Envio -->
+        <div class="button-container">
+          <button type="submit">GRAVAR</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

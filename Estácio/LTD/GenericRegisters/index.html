@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Adaptável</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Cadastro Adaptável</h1>
+    <form id="form">
+      <!-- Seletor para escolher o tipo de registro -->
+      <label for="registro">Escolha o tipo de registro:</label>
+      <select id="registro" name="registro" required>
+        <option value="">Selecione</option>
+        <option value="cidade">Cidade</option>
+        <option value="setor">Setor</option>
+        <option value="carreta">Carreta</option>
+        <option value="motorista">Motorista</option>
+        <option value="cavalo">Cavalo</option>
+        <option value="deposito">Depósito</option>
+        <option value="fabrica">Fábrica</option>
+      </select>
+
+      <!-- Seções Condicionais -->
+      <div id="form-cidade" class="form-section" style="display:none;">
+        <label for="cidadeDescricao">Descrição da Cidade:</label>
+        <input type="text" id="cidadeDescricao" name="descricao">
+      </div>
+
+      <div id="form-setor" class="form-section" style="display:none;">
+        <label for="setorDescricao">Descrição do Setor:</label>
+        <input type="text" id="setorDescricao" name="descricao">
+      </div>
+
+      <div id="form-carreta" class="form-section" style="display:none;">
+        <label for="carretaDescricao">Descrição da Carreta:</label>
+        <input type="text" id="carretaDescricao" name="descricao">
+        <label for="carretaPlaca">Placa da Carreta:</label>
+        <input type="text" id="carretaPlaca" name="placa">
+      </div>
+
+      <div id="form-motorista" class="form-section" style="display:none;">
+        <label for="motoristaDescricao">Descrição do Motorista:</label>
+        <input type="text" id="motoristaDescricao" name="descricao">
+        <label for="motoristaSetor">ID do Setor:</label>
+        <input type="number" id="motoristaSetor" name="id_setor">
+        <label for="motoristaCidade">ID da Cidade:</label>
+        <input type="number" id="motoristaCidade" name="id_cidade">
+      </div>
+
+      <div id="form-cavalo" class="form-section" style="display:none;">
+        <label for="cavaloTipo">Tipo do Cavalo:</label>
+        <input type="text" id="cavaloTipo" name="tipo">
+        <label for="cavaloDescricao">Descrição do Cavalo:</label>
+        <input type="text" id="cavaloDescricao" name="descricao">
+        <label for="cavaloPlaca">Placa do Cavalo:</label>
+        <input type="text" id="cavaloPlaca" name="placa">
+      </div>
+
+      <div id="form-deposito" class="form-section" style="display:none;">
+        <label for="depositoDescricao">Descrição do Depósito:</label>
+        <input type="text" id="depositoDescricao" name="descricao">
+      </div>
+
+      <div id="form-fabrica" class="form-section" style="display:none;">
+        <label for="fabricaDescricao">Descrição da Fábrica:</label>
+        <input type="text" id="fabricaDescricao" name="descricao">
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+    <div id="mensagem"></div>
+  </div>
+</body>
+</html>
