@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #mensagemDoServidor {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        min-height: 50px; /* Para visualizar o espaço */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Buscando Mensagem do Servidor PHP</h1>
+
+    <button id="btnBuscarMensagem">Buscar Mensagem</button>
+
+    <div id="mensagemDoServidor">
+      Clique no botão para buscar a mensagem do servidor...
+    </div>
+
+    <script>
+      document
+        .getElementById("btnBuscarMensagem")
+        .addEventListener("click", function () {
+          document.getElementById("mensagemDoServidor").innerHTML =
+            "carregando...";
+
+          fetch("exemplo02.php")
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(
+                  "Erro na resposta do servidor: " + response.statusText
+                );
+              }
+              return response.text();
+            })
+            .then((data) => {
+              document.getElementById("mensagemDoServidor").innerHTML = data;
+            })
+            .catch((error) => {
+              document.getElementById("mensagemDoServidor").innerHTML =
+                "Erro ao buscar a mensagem: " + error.message;
+            });
+        });
+    </script>
+  </body>
+</html>
