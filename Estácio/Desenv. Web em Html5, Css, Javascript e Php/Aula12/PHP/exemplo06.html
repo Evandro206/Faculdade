@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrir Dia da Semana (com Formulário)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="number"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        button[type="submit"] {
+            background-color: #28a745; /* Cor verde para submeter */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .info-text {
+            margin-bottom: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <h1>Qual é o Dia da Semana?</h1>
+        <p class="info-text">Insira um número de 1 a 7 e clique em "Consultar".</p>
+       
+        <form action="exemplo06.php" method="GET">
+            <input type="number" name="dia" id="numeroDiaInput"  value="1" onclick="this.select()">
+            <button type="submit">Consultar Dia</button>
+        </form>
+ 
+    </div>
+ 
+</body>
+</html>
