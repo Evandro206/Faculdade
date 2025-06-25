@@ -1,0 +1,140 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f7; /* Azul claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+h1 {
+    color: #2e7d32; /* Verde escuro */
+    margin-bottom: 15px;
+    font-size: 2.2em;
+}
+
+p {
+    color: #546e7a;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #333;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+    border-color: #2e7d32; /* Verde escuro no foco */
+    outline: none;
+    box-shadow: 0 0 7px rgba(46, 125, 50, 0.3);
+}
+
+small {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Verde principal */
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #43a047; /* Verde mais escuro */
+}
+
+/* Estilos para a seção de resultados */
+.results-section {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #e8f5e9; /* Verde bem clarinho para resultados */
+    border-radius: 8px;
+    text-align: left;
+    color: #333;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.results-section h2 {
+    color: #2e7d32; /* Verde escuro para título do resultado */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.results-section p {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    color: #333; /* Reinicia a cor para o texto do resultado */
+}
+
+.results-section strong {
+    color: #1b5e20; /* Verde mais escuro para valores destacados */
+    font-weight: bold;
+}
+
+/* Mensagem de erro */
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    background-color: #90a4ae; /* Cinza azulado */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 25px auto 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #78909c;
+}
